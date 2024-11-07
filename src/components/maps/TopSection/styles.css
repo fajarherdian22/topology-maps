@@ -1,0 +1,21 @@
+.container {
+    align-content: center;
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+    /* align-content: center;
+    justify-content: space-evenly; */
+    align-items: center;
+}
+
+.selectBox-container {
+    align-content: center;
+    display: grid;
+    grid-template-columns: 175px 175px
+}
+
+.selectBox {
+    height: 30px;
+    width: 165px;
+    font-size: 11px;
+}

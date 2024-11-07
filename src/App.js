@@ -1,14 +1,20 @@
 // import './App.css';
-import MapComponent from "./components/MiddleSection/Map";
+import ParentComponent from "./components/maps/ParentComponent";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <MapComponent />
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Routes>
+          <Route exact path="/" element={
+            <center> <h2> WELCOME !!! </h2> </center>}
+          />
+          <Route exact path="/maps" element={<ParentComponent />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
