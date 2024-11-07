@@ -14,7 +14,7 @@ const SelectBox = ({ onCityChange }) => {
     const fetchCities = async () => {
         setLoading(true);
         try {
-            const response = await axios.get('http://localhost:8080/api/topo/list/city');
+            const response = await axios.get('http://localhost:8080/api/data/list/city');
             const formattedOptions = response.data.data.map(city => ({
                 value: city,
                 label: city,
@@ -31,10 +31,11 @@ const SelectBox = ({ onCityChange }) => {
     const fetchCityData = async (city) => {
         setLoading(true);
         try {
-            const response = await axios.post('http://localhost:8080/api/topo/city', {
+            const response = await axios.post('http://localhost:8080/api/data/city', {
                 city,
             });
             onCityChange(response.data.data, city);
+            
         } catch (error) {
             setError("Failed to fetch city data.");
             console.error(error);

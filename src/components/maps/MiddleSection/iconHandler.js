@@ -13,27 +13,28 @@ const icons = (iconType) => {
             iconUrl: towerIcon,
             iconSize: [20, 30],
         });
-    } else if (iconType === "site black") {
+    }
+    else if (iconType === "black") {
         return L.icon({
             iconUrl: towerIcon,
             iconSize: [20, 30],
         });
-    } else if (iconType === "site red") {
+    } else if (iconType === "red") {
         return L.icon({
             iconUrl: towerRed,
             iconSize: [20, 30],
         });
-    } else if (iconType === "site yellow") {
+    } else if (iconType === "yellow") {
         return L.icon({
             iconUrl: toweryellow,
             iconSize: [20, 30],
         });
-    } else if (iconType === "site green") {
+    } else if (iconType === "green") {
         return L.icon({
             iconUrl: towergreen,
             iconSize: [20, 30],
         });
-    } else if (iconType === "site orange") {
+    } else if (iconType === "orange") {
         return L.icon({
             iconUrl: towerorange,
             iconSize: [20, 30],
