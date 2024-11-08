@@ -3,7 +3,6 @@ const Level = [
     { value: 'Region', label: 'Region' },
     { value: 'City', label: 'City' },
     { value: 'Site', label: 'Site' },
-
 ]
 
 

@@ -14,7 +14,7 @@ const SelectBox = ({ onCityChange }) => {
     const fetchCities = async () => {
         setLoading(true);
         try {
-            const response = await axios.get('http://localhost:8080/api/data/list/city');
+            const response = await axios.get('http://192.168.1.6:8080/api/data/list/city');
             const formattedOptions = response.data.data.map(city => ({
                 value: city,
                 label: city,
@@ -31,7 +31,7 @@ const SelectBox = ({ onCityChange }) => {
     const fetchCityData = async (city) => {
         setLoading(true);
         try {
-            const response = await axios.post('http://localhost:8080/api/data/city', {
+            const response = await axios.post('http://192.168.1.6:8080/api/data/city', {
                 city,
             });
             onCityChange(response.data.data, city);
@@ -57,12 +57,16 @@ const SelectBox = ({ onCityChange }) => {
 
         <div className='container'>
             <div className='selectBox-container'>
-
+            <div className='titleFilter'>Level</div>
+            <div className='titleFilter'>Select Filter</div>
+            <div>
                 <Select
                     className='selectBox'
                     options={Level}
-                    defaultValue={{ value: "Site", label: "Site" }}
+                    defaultValue={{ value: "City", label: "City" }}
                 />
+            </div>
+            <div>
                 <Select
                     className="selectBox"
                     onChange={handleChange}
@@ -71,6 +75,7 @@ const SelectBox = ({ onCityChange }) => {
                     isLoading={loading}
                     defaultValue={{ value: "KOTA TASIKMALAYA", label: "KOTA TASIKMALAYA" }}  // Set default selection
                 />
+                </div>
                 {error && <div className="error">{error}</div>}
             </div>
         </div>

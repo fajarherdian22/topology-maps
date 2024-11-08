@@ -1,11 +1,12 @@
 import towerIcon from '../../../assets/icon/tower.svg';
 import towerRed from '../../../assets/icon/tower red.svg';
-import toweryellow from '../../../assets/icon/tower yellow.svg';
+import towerBlue from '../../../assets/icon/tower blue.svg';
 import towerorange from '../../../assets/icon/tower orange.svg';
 import towergreen from '../../../assets/icon/tower green.svg';
-import routerIcon from '../../../assets/icon/router.svg';
+import routerIcon from '../../../assets/icon/router1.png';
 import repeaterIcon from '../../../assets/icon/repeater.svg';
 import L from 'leaflet';
+
 
 const icons = (iconType) => {
     if (iconType === "site") {
@@ -24,9 +25,9 @@ const icons = (iconType) => {
             iconUrl: towerRed,
             iconSize: [20, 30],
         });
-    } else if (iconType === "yellow") {
+    } else if (iconType === "blue") {
         return L.icon({
-            iconUrl: toweryellow,
+            iconUrl: towerBlue,
             iconSize: [20, 30],
         });
     } else if (iconType === "green") {
@@ -43,7 +44,7 @@ const icons = (iconType) => {
     else if (iconType === "router") {
         return L.icon({
             iconUrl: routerIcon,
-            iconSize: [50, 32],
+            iconSize: [45, 32],
         });
     } else if (iconType === "repeater") {
         return L.icon({
